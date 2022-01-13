@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "contentful-typescript-codegen": "^3.2.3"
+  },
+  "scripts": {
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
+  },
+  "dependencies": {
+    "contentful-management": "^7.49.0",
+    "prettier": "^2.5.1"
+  }
+}
