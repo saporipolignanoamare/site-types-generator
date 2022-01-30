@@ -3,6 +3,28 @@
 import { Asset, Entry } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 
+export interface IAcquistaFields {
+  /** testo */
+  testo?: Document | undefined;
+}
+
+export interface IAcquista extends Entry<IAcquistaFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "acquista";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface ICategoriaFields {
   /** Nome categoria */
   nomeCategoria: string;
@@ -65,7 +87,29 @@ export interface IProdotto extends Entry<IProdottoFields> {
   };
 }
 
-export type CONTENT_TYPE = "categoria" | "prodotto";
+export interface ITelefonoFields {
+  /** numeri */
+  numeri?: Record<string, any> | undefined;
+}
+
+export interface ITelefono extends Entry<ITelefonoFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "telefono";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export type CONTENT_TYPE = "acquista" | "categoria" | "prodotto" | "telefono";
 
 export type LOCALE_CODE = "en" | "it";
 

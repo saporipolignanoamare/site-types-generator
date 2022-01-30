@@ -4,7 +4,7 @@
     "contentful-typescript-codegen": "^3.2.3"
   },
   "scripts": {
-    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
+    "generate": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
   },
   "dependencies": {
     "dotenv": "^14.2.0",
